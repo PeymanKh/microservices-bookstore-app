@@ -1,3 +1,23 @@
+"""
+Flask application for managing a bookstore.
+
+This application provides RESTful endpoints for CRUD operations on a bookstore database.
+The database is powered by MongoDB, and the application integrates with it using utility
+functions for connection and initialization.
+
+Endpoints:
+- `/` [GET]: Initializes the bookstore database with data from a JSON file.
+- `/books` [GET]: Retrieves all books in the database.
+- `/books` [POST]: Adds a new book to the database.
+- `/books/<isbn>` [PUT]: Updates an existing book's details by its ISBN.
+- `/books/<isbn>` [DELETE]: Deletes a book by its ISBN.
+
+Author: Peyman Kh
+Date: 2024-12-11
+"""
+
+
+# Import libraries
 from flask import Flask, jsonify, request
 from utils import get_mongo_client, initialize_bookstore_database
 import os

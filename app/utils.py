@@ -1,3 +1,15 @@
+"""
+Module for managing MongoDB connections and initializing the bookstore database.
+
+This module provides functionality to connect to a MongoDB instance using
+environment variables and to initialize a bookstore database with data
+from a JSON file.
+
+Author: Peyman Kh
+Date: 2024-12-11
+"""
+
+
 # Import libraries
 import os
 import json
